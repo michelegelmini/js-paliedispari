@@ -8,14 +8,14 @@ let userChoiceFormatted = userChoice.toLowerCase();
 while (!(userChoiceFormatted == 'pari' || userChoiceFormatted == 'dispari')) {
     userChoice = prompt('Inserisci un valore valido: pari o dispari?');
     userChoiceFormatted = userChoice.toLowerCase();
-    console.log(userChoiceFormatted);
+    /* console.log(userChoiceFormatted); */
 }
 
 //prompt numero utente
 let userNumber = Number(prompt('Scegli un numero da 1 a 5'));
 
 while (!(userNumber >= 1 && userNumber <= 5)) {
-    userNumber = prompt('Inserisci un valore valido');
+    userNumber = Number(prompt('Inserisci un valore valido: scegli un numero da 1 a 5'));
 } console.log(`il tuo numero è ${userNumber}`);
 
 
@@ -33,10 +33,10 @@ console.log(`la somma è ${sum}`)
 const module = sum % 2;
 
 //verifica della vittoria
-function whoWon(odds, sumModule) {
-    if (odds === 'pari' && sumModule === 0) {
+function whoWon(oddsChoice, sumModule) {
+    if (oddsChoice === 'pari' && sumModule === 0) {
         console.log('hai vinto!')
-    } else if (odds === 'dispari' && sumModule === 1) {
+    } else if (oddsChoice === 'dispari' && sumModule === 1) {
         console.log('hai vinto!')
     } else {
         console.log('hai perso')
@@ -46,16 +46,3 @@ function whoWon(odds, sumModule) {
 whoWon(userChoice, module);
 
 
-// switch (userChoiceFormatted) {
-//     case "pari":
-//         userChoice = 'pari'
-//         console.log(userChoice);
-//         break;
-//     case "dispari":
-//         userChoice = 'dispari'
-//         console.log(userChoice);
-//         break;
-//     default:
-//         userChoice = prompt('Inserisci un valore valido: pari o dispari?');
-//         break;
-// }
