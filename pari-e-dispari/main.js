@@ -19,9 +19,13 @@ while (!(userNumber >= 1 && userNumber <= 5)) {
 } console.log(`il tuo numero è ${userNumber}`);
 
 
+// generazione numero casuale
+function getRandomInt(max) {
+    return Math.ceil(Math.random() * max);
+}
 
-
-
+const computerNumber = getRandomInt(5);
+console.log(computerNumber);
 
 
 
