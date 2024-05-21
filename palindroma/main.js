@@ -4,7 +4,8 @@
 const userWord = prompt('Inserisci una parola');
 console.log(userWord);
 
-
+//formattazione parola
+const userWordFormatted = userWord.toLowerCase;
 
 //funzione per la verifica del palindromo
 
@@ -19,7 +20,7 @@ function isPalindrome(word) {
     return true;
 }
 
-if (isPalindrome(userWord)) {
+if (isPalindrome(userWordFormatted)) {
     document.write(`La parola <strong>${userWord}</strong> è un palindromo! :) `);
 } else {
     document.write(`La parola <strong>${userWord}</strong> NON è un palindromo! :( `);
