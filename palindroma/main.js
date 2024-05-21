@@ -20,6 +20,7 @@ function isPalindrome(word) {
     return true;
 }
 
+//stampa dei risultati in pagina
 if (isPalindrome(userWordFormatted)) {
     document.write(`La parola <strong>${userWord}</strong> è un palindromo! :) `);
 } else {
