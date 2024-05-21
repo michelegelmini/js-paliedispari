@@ -5,10 +5,10 @@ const userWord = prompt('Inserisci una parola');
 console.log(userWord);
 
 //formattazione parola
-const userWordFormatted = userWord.toLowerCase;
+const userWordFormatted = userWord.toLowerCase().split(' ').join('').normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+console.log(userWordFormatted)
 
 //funzione per la verifica del palindromo
-
 function isPalindrome(word) {
     var len = word.length;
     console.log(len);
